@@ -1,2 +1,3 @@
 # macgen
-MAC address changer for linux
+Macgen changes your device\'s MAC-address
+usage: macgen.py [-h] device
