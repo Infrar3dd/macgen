@@ -7,6 +7,6 @@ usage: macgen.py [-h] [-d DEVICE]
 
 options:
   -h, --help           show this help message and exit
-  -d, --device DEVICE  Device name
+  -d, --device DEVICE  wifi device name
 
 ```
