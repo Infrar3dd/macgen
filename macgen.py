@@ -4,7 +4,7 @@ import argparse
   
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='MACgen= changes your device\'s MAC-address')
-    parser.add_argument('-d','--device', help='Device name')
+    parser.add_argument('-d','--device', help='wifi device name')
     args = parser.parse_args()
     addr = ("%02x:%02x:%02x:%02x:%02x:%02x:"%(random.randint(0,255),random.randint(0,255),random.randint(0,255),random.randint(0,255),random.randint(0,255),random.randint(0,255))).upper()
     try:
