@@ -8,9 +8,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
     addr = ("%02x:%02x:%02x:%02x:%02x:%02x:"%(random.randint(0,255),random.randint(0,255),random.randint(0,255),random.randint(0,255),random.randint(0,255),random.randint(0,255))).upper()
     try:
-        os.system(f"sudo ifconfig {args.device} down")
-        os.system(f"sudo ifconfig {args.device} hw ether {addr}")
-        os.system(f"sudo ifconfig {args.device} up")
-        print(f"Now your MAC is: {addr}")
+        if (';' in args.device) or ('|' in args.device) or ('&' in args.device):
+            print("Something went wrong :(")
+        else:
+            os.system(f"sudo ifconfig {args.device} down")
+            os.system(f"sudo ifconfig {args.device} hw ether {addr}")
+            os.system(f"sudo ifconfig {args.device} up")
+            print(f"Now your MAC is: {addr}")
     except:
     	print("Something went wrong :(")
