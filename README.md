@@ -1,6 +1,6 @@
 # macgen
 Macgen changes your device\'s MAC-address
-```python
+```bash
 python3 macgen.py -h
 
 usage: macgen.py [-h] [-d DEVICE]
